@@ -19,9 +19,17 @@ public class App {
                 System.out.println("Adiós!");
                 break;
             }
+            
             if (opcion == 1) {
+                System.out.print("Ingresa el lado del cuadrado: ");
+                double lado = teclado.nextDouble();
+                Cuadrado cuadrado = new Cuadrado(lado);
 
+                System.out.println("Área del cuadrado: " + cuadrado.obtenerArea());
+                System.out.println("Perímetro del cuadrado: " + cuadrado.obtenerPerimetro());
+                break;
             }
+
             if (opcion == 2) {
                 System.out.print("Ingresa la altura del rectángulo: ");
                 double altura = teclado.nextDouble();
@@ -42,7 +50,13 @@ public class App {
                 break;
             }
             if (opcion == 4) {
+                System.out.print("Ingresa el radio del círculo: ");
+                double radio = teclado.nextDouble();
+                Circulo circulo = new Circulo(radio);
 
+                System.out.println("Área del círculo: " + circulo.obtenerArea());
+                System.out.println("Perímetro del círculo: " + circulo.obtenerPerimetro());
+                break;
             } else {
                 System.out.println("Opción no válida");
             }
